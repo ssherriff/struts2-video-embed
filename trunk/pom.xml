@@ -84,20 +84,10 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.0</version>
-                <configuration>
-                    <tagBase>https://struts2-video-embed.googlecode.com/svn/tags</tagBase>
-                    <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy assembly:assembly</goals>
-                </configuration>
-            </plugin>
             <!--plugin>
                 <groupId>org.riedelcastro</groupId>
                 <artifactId>maven-gcupload-plugin</artifactId>
-                <version>1.0</version>
+                <version>0.9</version>
                 <configuration>
                     <uploads>
                         <upload>
@@ -117,6 +107,17 @@
                     </uploads>
                 </configuration>
             </plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <tagBase>https://struts2-video-embed.googlecode.com/svn/tags</tagBase>
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy assembly:assembly</goals>
+                    <!--goals>deploy assembly:assembly gcupload:gcupload</goals-->
+                </configuration>
+            </plugin>
         </plugins>
         <defaultGoal>install</defaultGoal>
     </build>
@@ -150,5 +151,13 @@
             </build>
         </profile>
     </profiles>
+
+    <repositories>
+      <repository>
+        <id>cheetah</id>
+        <name>cheetah-releases</name>
+        <url>http://192.168.1.50:8081/artifactory/libs-releases-local</url>
+      </repository>
+    </repositories>
     
 </project>
