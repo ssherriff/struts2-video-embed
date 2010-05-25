@@ -114,7 +114,7 @@
                 <configuration>
                     <tagBase>https://struts2-video-embed.googlecode.com/svn/tags</tagBase>
                     <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy assembly:assembly</goals>
+                    <goals>install assembly:assembly</goals>
                     <!--goals>deploy assembly:assembly gcupload:gcupload</goals-->
                 </configuration>
             </plugin>
