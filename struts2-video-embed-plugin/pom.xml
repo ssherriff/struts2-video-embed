@@ -71,29 +71,6 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
-            <!--plugin>
-                <groupId>org.riedelcastro</groupId>
-                <artifactId>maven-gcupload-plugin</artifactId>
-                <version>1.0</version>
-                <configuration>
-                    <uploads>
-                        <upload>
-                            <extensions>jar</extensions>
-                            <labels>Type-Package,Featured</labels>
-                        </upload>
-                        <upload>
-                            <postfix>sources</postfix>
-                            <extensions>jar</extensions>
-                            <labels>Type-Source,Featured</labels>
-                        </upload>
-                        <upload>
-                            <postfix>javadoc</postfix>
-                            <extensions>jar</extensions>
-                            <labels>Type-Docs,Featured</labels>
-                        </upload>
-                    </uploads>
-                </configuration>
-            </plugin-->
         </plugins>
     </build>
 
@@ -141,4 +118,5 @@
         </dependency>
     </dependencies>
 </project>
+
 
