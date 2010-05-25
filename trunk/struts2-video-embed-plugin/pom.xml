@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.trexart.struts2.videoembed</groupId>
+        <artifactId>struts2-video-embed</artifactId>
+        <version>1.0-beta-1</version>
+    </parent>
+    <artifactId>struts2-video-embed-plugin</artifactId>
+    <name>Struts 2 Video Embed Plugin</name>
+    <packaging>jar</packaging>
+    <url>http://code.google.com/p/struts2-video-embed</url>
+
+    <scm>
+        <connection>scm:svn:http://struts2-video-embed.googlecode.com/svn/tags/1.0-beta-1/struts2-video-embed-plugin</connection>
+        <developerConnection>scm:svn:https://struts2-video-embed.googlecode.com/svn/tags/1.0-beta-1/struts2-video-embed-plugin</developerConnection>
+        <url>scm:svn:https://struts2-video-embed.googlecode.com/svn/tags/1.0-beta-1/browse</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.myfaces.tobago</groupId>
+                <artifactId>maven-apt-plugin</artifactId>
+                <version>1.0.25</version>
+                <configuration>
+                    <A>
+                        uri=/struts-video-embed-tags,
+                        tlibVersion=1.0,
+                        jspVersion=2.0,
+                        shortName=sj,
+                        displayName=Struts2 Video Embed Tags,
+                        outFile=${basedir}/target/classes/META-INF/struts-video-embed-tags.tld,
+                        description=Struts2 Video Embed Tags,
+                        outTemplatesDir=${basedir}/src/site/docs
+                    </A>
+                    <resourceTargetPath>target</resourceTargetPath>
+                    <fork>false</fork>
+                    <force>true</force>
+                    <nocompile>true</nocompile>
+                    <showWarnings>true</showWarnings>
+                    <factory>
+                        org.apache.struts.annotations.taglib.apt.TLDAnnotationProcessorFactory
+                    </factory>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!-- Core -->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts-annotations</artifactId>
+            <version>1.0.4</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- JSP API -->
+
+        <!-- struts-annotations must be in compile scope for maven-apt-plugin to
+            function correctly. Marking it optional to exclude it from transitive dependency resolution -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>${struts2.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+
+
