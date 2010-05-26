@@ -1,0 +1,4 @@
+#summary Description and examples of Vimeo usage
+#sidebar Sidebar
+
+Vimeo usage documentation goes here...
