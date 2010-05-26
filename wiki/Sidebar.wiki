@@ -3,6 +3,7 @@
   * [General General]
     * [News News]
     * [Changelog Changelog]
+    * [FAQ FAQ]
   * [Usage Usage]
     * [YouTubeUsage YouTube]
     * [MySpaceUsage MySpace]
