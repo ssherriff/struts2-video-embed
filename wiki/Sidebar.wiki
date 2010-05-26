@@ -1,10 +1,10 @@
 #summary The sidebar menu for the wiki
 
-* [General General]
-  * [News News]
-  * [Changelog Changelog]
-* [Usage Usage]
-  * [YouTubeUsage YouTube]
-  * [MySpaceUsage MySpace]
-  * [VimeoUsage Vimeo]
-  * [GoogleUsage Google]
+  * [General General]
+    * [News News]
+    * [Changelog Changelog]
+  * [Usage Usage]
+    * [YouTubeUsage YouTube]
+    * [MySpaceUsage MySpace]
+    * [VimeoUsage Vimeo]
+    * [GoogleUsage Google]
