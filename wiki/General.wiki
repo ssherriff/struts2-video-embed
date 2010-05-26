@@ -1,0 +1,5 @@
+#summary General information
+#sidebar Sidebar
+
+  * [News News]
+  * [Changelog Changelog]
