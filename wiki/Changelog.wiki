@@ -1,8 +1,7 @@
 #summary Changelog for the project
-
 #sidebar Sidebar
 
-= Version 1.0-beta-1 =
+== Version 1.0-beta-1 ==
 
 Being the first release, there isn't really any changes. Basic functionality included:
 
