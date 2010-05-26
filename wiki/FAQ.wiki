@@ -1,0 +1,37 @@
+#summary Frequently Asked Questions
+#sidebar Sidebar
+
+<wiki:toc max_depth="3" />
+
+==Installation==
+
+===How can I use this plugin?===
+
+   # Download the struts2-video-embed-plugin-x.x.x.jar
+   # Put it into your Classpath (WEB-INF/lib)
+   # Add the Tag-Lib to your JSP <%@ taglib prefix="sj" uri="/struts-video-embed-tags"%> 
+
+===How can I use this plugin with Maven?===
+
+I've created a Maven repository in this google code svn temporarily, with view to get the library better available in the future.
+
+Put this in your dependencies:
+
+{{{
+<dependency>
+  <groupId>com.trexart.struts2.videoembed</groupId>
+  <artifactId>struts2-video-embed-plugin</artifactId>
+  <version>...</version>
+</dependency>
+}}}
+
+Since this will not be known in Maven, you will have to put the following in your pom.xml:
+
+{{{
+<repositories>
+  <repository>
+    <id>struts2-video-embed</id>
+    <url>http://struts2-video-embed.googlecode.com/svn/trunk/maven/releases</url>
+  </repository>
+</repositories>
+}}}
