@@ -1,3 +1,4 @@
 #summary Description and examples of YouTube usage
+#sidebar Sidebar
 
 YouTube usage documentation goes here...
