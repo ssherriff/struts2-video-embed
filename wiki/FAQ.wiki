@@ -9,7 +9,7 @@
 
    # Download the struts2-video-embed-plugin-x.x.x.jar
    # Put it into your Classpath (WEB-INF/lib)
-   # Add the Tag-Lib to your JSP <%@ taglib prefix="sj" uri="/struts-video-embed-tags"%> 
+   # Add the Tag-Lib to your JSP <%@ taglib prefix="sve" uri="/struts-video-embed-tags"%> 
 
 ===How can I use this plugin with Maven?===
 
